@@ -1,0 +1,223 @@
+{
+  "descriptions": [
+    {
+      "id": "t1w",
+      "datatype": "anat",
+      "suffix": "T1w",
+      "criteria": {
+        "SeriesDescription": "3D Ax T1 MP-RAGE_R22"
+      }
+    },
+    {
+      "id": "dwi_r2",
+      "datatype": "dwi",
+      "suffix": "dwi",
+      "custom_entities": "acq-R2",
+      "criteria": {
+        "SeriesDescription": "Ax DWI TENSOR R2"
+      }
+    },
+    {
+      "id": "dwi_r3",
+      "datatype": "dwi",
+      "suffix": "dwi",
+      "custom_entities": "acq-R3",
+      "criteria": {
+        "SeriesDescription": "Ax DWI TENSOR R3"
+      }
+    },
+    {
+      "id": "dwi_r1p5",
+      "datatype": "dwi",
+      "suffix": "dwi",
+      "custom_entities": "acq-R1p5",
+      "criteria": {
+        "SeriesDescription": "Ax DWI TENSOR R1p5"
+      }
+    },
+    {
+      "id": "dwi_r2mb2",
+      "datatype": "dwi",
+      "suffix": "dwi",
+      "custom_entities": "acq-R2MB2",
+      "criteria": {
+        "SeriesDescription": "Ax DWI TENSOR R2MB2"
+      }
+    },
+    {
+      "id": "bold_hb8_72_int_asc",
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_acq-HB8sl72IntAsc",
+      "criteria": {
+        "SeriesDescription": "Ax fMRI HB8 72sl int asc"
+      }
+    },
+    {
+      "id": "bold_hb8_72_seq_asc",
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_acq-HB8sl72SeqAsc",
+      "criteria": {
+        "SeriesDescription": "Ax fMRI HB8 72sl seq asc"
+      }
+    },
+    {
+      "id": "bold_hb8_72_int_des",
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_acq-HB8sl72IntDes",
+      "criteria": {
+        "SeriesDescription": "Ax fMRI HB8 72sl int des"
+      }
+    },
+    {
+      "id": "bold_hb8_72_seq_des",
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_acq-HB8sl72SeqDes",
+      "criteria": {
+        "SeriesDescription": "Ax fMRI HB8 72sl seq des"
+      }
+    },
+    {
+      "id": "bold_hb8_80_int_asc",
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_acq-HB8sl80IntAsc",
+      "criteria": {
+        "SeriesDescription": "Ax fMRI HB8 80sl int asc"
+      }
+    },
+    {
+      "id": "bold_hb8_80_seq_asc",
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_acq-HB8sl80SeqAsc",
+      "criteria": {
+        "SeriesDescription": "Ax fMRI HB8 80sl seq asc"
+      }
+    },
+    {
+      "id": "bold_hb8_80_int_des",
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_acq-HB8sl80IntDes",
+      "criteria": {
+        "SeriesDescription": "Ax fMRI HB8 80sl int des"
+      }
+    },
+    {
+      "id": "bold_hb8_80_seq_des",
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_acq-HB8sl80SeqDes",
+      "criteria": {
+        "SeriesDescription": "Ax fMRI HB8 80sl seq des"
+      }
+    },
+    {
+      "id": "bold_hb8_77_int_asc",
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_acq-HB8sl77IntAsc",
+      "criteria": {
+        "SeriesDescription": "Ax fMRI HB8 77sl int asc"
+      }
+    },
+    {
+      "id": "bold_hb8_77_seq_asc",
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_acq-HB8sl77SeqAsc",
+      "criteria": {
+        "SeriesDescription": "Ax fMRI HB8 77sl seq asc"
+      }
+    },
+    {
+      "id": "bold_hb8_77_int_des",
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_acq-HB8sl77IntDes",
+      "criteria": {
+        "SeriesDescription": "Ax fMRI HB8 77sl int des"
+      }
+    },
+    {
+      "id": "bold_hb8_77_seq_des",
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_acq-HB8sl77SeqDes",
+      "criteria": {
+        "SeriesDescription": "Ax fMRI HB8 77sl seq des"
+      }
+    },
+    {
+      "id": "bold_hb3_48_int_asc",
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_acq-HB3sl48IntAsc",
+      "criteria": {
+        "SeriesDescription": "Ax fMRI HB3 48sl int asc"
+      }
+    },
+    {
+      "id": "bold_hb3_48_seq_asc",
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_acq-HB3sl48SeqAsc",
+      "criteria": {
+        "SeriesDescription": "Ax fMRI HB3 48sl seq asc"
+      }
+    }
+  ],
+  "grouping": "visit",
+  "images": true,
+  "deface": {
+    "suffixes": {
+      "T1w": true,
+      "T2w": true,
+      "PDw": true,
+      "T2starw": true,
+      "FLAIR": true,
+      "inplaneT1": true,
+      "inplaneT2": true,
+      "PDT2": true,
+      "angio": true,
+      "T2star": true,
+      "FLASH": true,
+      "PD": true,
+      "T1map": true,
+      "T2map": true,
+      "T2starmap": true,
+      "R1map": true,
+      "R2map": true,
+      "R2starmap": true,
+      "PDmap": true,
+      "MTRmap": true,
+      "MTsat": true,
+      "UNIT1": true,
+      "T1rho": true,
+      "MWFmap": true,
+      "MTVmap": true,
+      "Chimap": true,
+      "S0map": true,
+      "M0map": true,
+      "MEGRE": true,
+      "MESE": true,
+      "VFA": true,
+      "IRT1": true,
+      "MP2RAGE": true,
+      "MPM": true,
+      "MTS": true,
+      "MTR": true
+    },
+    "check": {
+      "T1w": {
+        "removed_min": 0.03,
+        "removed_max": 0.2,
+        "anterior_min": 0.6
+      }
+    }
+  }
+}

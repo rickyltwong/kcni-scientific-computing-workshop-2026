@@ -1,0 +1,65 @@
+{
+  "name": "dcm2niix-teaching",
+  "label": "DICOM to NIfTI (teaching example)",
+  "description": "Convert one scan's DICOM files to NIfTI with dcm2niix. Teaching example from the KCNI Scientific Computing Workshop 2026; it is not installed on CAMH XNAT.",
+  "version": "1.0.0",
+  "schema-version": "1.0",
+  "image": "dcm2niix-teaching:latest",
+  "type": "docker",
+  "override-entrypoint": true,
+  "command-line": "/usr/local/bin/convert.sh",
+  "mounts": [
+    {"name": "dicom-in", "writable": false, "path": "/input"},
+    {"name": "nifti-out", "writable": true, "path": "/output"}
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "nifti",
+      "description": "NIfTI images, JSON sidecars, and .bval/.bvec for diffusion scans",
+      "required": true,
+      "mount": "nifti-out",
+      "path": ".",
+      "glob": "**/*"
+    }
+  ],
+  "xnat": [
+    {
+      "name": "dcm2niix-teaching-scan",
+      "label": "DICOM to NIfTI (teaching example)",
+      "description": "Convert this scan's DICOM resource to a NIFTI resource on the same scan",
+      "contexts": ["xnat:mrScanData"],
+      "external-inputs": [
+        {
+          "name": "scan",
+          "description": "The scan to convert",
+          "type": "Scan",
+          "matcher": "'DICOM' in @.resources[*].label",
+          "required": true,
+          "load-children": true
+        }
+      ],
+      "derived-inputs": [
+        {
+          "name": "scan-dicom",
+          "description": "The scan's DICOM resource",
+          "type": "Resource",
+          "matcher": "@.label == 'DICOM'",
+          "required": true,
+          "provides-files-for-command-mount": "dicom-in",
+          "derived-from-wrapper-input": "scan"
+        }
+      ],
+      "output-handlers": [
+        {
+          "name": "nifti-resource",
+          "accepts-command-output": "nifti",
+          "as-a-child-of": "scan",
+          "type": "Resource",
+          "label": "NIFTI",
+          "tags": []
+        }
+      ]
+    }
+  ]
+}
