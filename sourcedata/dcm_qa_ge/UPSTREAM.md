@@ -13,4 +13,4 @@ Unchanged, from the upstream `In/` folder:
 - `In/SliceTiming/2_*` to `In/SliceTiming/15_*`: 14 fMRI series
 - `In/SliceTiming/ParametersDescription.txt` and `In/SliceTiming/exam_summary.txt`
 
-Not copied: the upstream reference outputs (`Ref/`), the validation scripts, and the `SliceTimingMPh` and `SliceTimingRT` series, which are not in the workshop session.
+Not copied: the upstream reference outputs (`Ref/`), the validation scripts, `In/SliceTiming/fMRI_Slicetimestamps/`, and the `SliceTimingMPh` and `SliceTimingRT` series, which are not in the workshop session.

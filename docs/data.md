@@ -40,6 +40,6 @@ On XNAT, the DICOM to NIfTI (KCNI default) pipeline adds a `NIFTI` resource to t
 [`project-resource/config.json`](../project-resource/config.json) is the `config.json` in the `BIDS` resource of project TST10_CMH: the settings the DICOM to NIfTI pipeline reads there. It was first written for project TST01_CMH, which holds the same test data. It works only with KCNI's converter on CAMH XNAT and is here for reference.
 
 - `descriptions` maps each series, by its exact series description, to a BIDS data type and suffix (`dwi`, `T1w`, `bold`). A series whose description differs matches nothing.
-- `images: true` keeps the `.nii.gz` images on XNAT. Without it, only the sidecars are kept.
+- `images: true` keeps the `.nii.gz` images on XNAT. Without it, only the sidecars (and `.bval`/`.bvec` for diffusion scans) are kept.
 - `deface` sets which anatomical image types get a defaced copy and the quality check that copy must pass.
 - `grouping` sets how sessions become BIDS sessions when a dataset is packaged.

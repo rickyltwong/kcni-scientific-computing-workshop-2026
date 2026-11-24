@@ -25,4 +25,6 @@ docker run --rm \
 
 `output/` now holds the T1 as a `.nii.gz` image and its `.json` sidecar. A diffusion series, such as `In/01_Ax_DWI_TENSOR_R2`, also gives a `.bval` and a `.bvec`. The image installs dcm2niix from Debian 12, which is version v1.0.20220720.
 
+The files are named by dcm2niix's default pattern (for example `input_Brain_Advanced_Sequences_20200929001457_5.nii.gz`). KCNI's converter on XNAT names them by scan number and series (`5_3D_Ax_T1_MP-RAGE_R22.nii.gz`), uses a newer dcm2niix and also writes `conversion.json`, so its output is not byte-for-byte the same.
+
 On a Linux host with SELinux enforcing, add `,z` to each `-v` option (for example `:/input:ro,z`).
